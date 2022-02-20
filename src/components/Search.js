@@ -10,7 +10,7 @@ const Search = (props) => {
     return (
         <>
 
-       <Input type="text" onChange={handleChange}/>
+       <Input placeholder="search for food" type="text" onChange={handleChange}/>
 
         </>
     )

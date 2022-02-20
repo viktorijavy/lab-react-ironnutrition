@@ -20,3 +20,13 @@ h1 {
   justify-content: center;
  
 }
+.search {
+  width : 1000px;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  
+}
+.input-field {
+  border-radius: 10px;
+}

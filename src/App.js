@@ -6,6 +6,7 @@ import FoodBox from './components/FoodBox';
 import AddFood from './components/AddFood';
 import Search from './components/Search';
 
+
 const App = () => {
 
 
@@ -15,8 +16,8 @@ const App = () => {
   const [image, setImage] = useState('')
   const [calories, setCalories] = useState(0)
   const [quantity, setQuantity] = useState(0)
-  const [ query, setQuery ] = useState('')
-  
+  const [query, setQuery] = useState('')
+
 
   const handleNameChange = (e) => {
     setName(e.target.value)
@@ -38,14 +39,14 @@ const App = () => {
     e.preventDefault()
     const addedFood = { name, image, calories, quantity }
     setFoods(foods => [addedFood, ...foods])
+    
+    setName('')
+    setImage('')
+    setCalories(0)
+    setQuantity(0)
   }
 
   // console.log('this is food from App.js', foods)
-  
-  
-
-
-  
 
 
   return (
@@ -53,7 +54,10 @@ const App = () => {
 
       <h1> Ironnutrition </h1>
 
-      <Search query={setQuery}/>
+
+      <div className='search'>
+        <Search query={setQuery} />
+      </div>
 
       <div className='add-food-container'>
 

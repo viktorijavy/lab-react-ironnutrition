@@ -1,4 +1,4 @@
-import { Card, Col } from 'antd';
+import { Card, Col, Button } from 'antd';
 
 const FoodBox = (props) => {
 
@@ -27,6 +27,7 @@ const FoodBox = (props) => {
                             <p> {food.calories}</p>
                             <p> {food.quantity}</p>
                             <p> total calories: {totalCal}</p>
+                            <Button> Delete </Button>
                         </Card>
                     </Col>
                 </div>
