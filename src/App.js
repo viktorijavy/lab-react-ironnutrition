@@ -1,24 +1,73 @@
 import React from 'react';
-import logo from './logo.svg';
+import foodList from './foods.json';
+import { useState } from 'react';
 import './App.css';
+import FoodBox from './components/FoodBox';
+import AddFood from './components/AddFood';
+import Search from './components/Search';
 
-function App() {
+const App = () => {
+
+
+  const [foods, setFoods] = useState(foodList)
+
+  const [name, setName] = useState('')
+  const [image, setImage] = useState('')
+  const [calories, setCalories] = useState(0)
+  const [quantity, setQuantity] = useState(0)
+  const [ query, setQuery ] = useState('')
+  
+
+  const handleNameChange = (e) => {
+    setName(e.target.value)
+  }
+
+  const handleImageChange = (e) => {
+    setImage(e.target.value)
+  }
+
+  const handleCaloriesChange = (e) => {
+    setCalories(e.target.value)
+  }
+
+  const handleQuantityChange = (e) => {
+    setQuantity(e.target.value)
+  }
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    const addedFood = { name, image, calories, quantity }
+    setFoods(foods => [addedFood, ...foods])
+  }
+
+  // console.log('this is food from App.js', foods)
+  
+  
+
+
+  
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <h1> Ironnutrition </h1>
+
+      <Search query={setQuery}/>
+
+      <div className='add-food-container'>
+
+
+        <AddFood name={name} image={image} calories={calories} quantity={quantity} handleSubmit={handleSubmit}
+          handleNameChange={handleNameChange} handleImageChange={handleImageChange} handleCaloriesChange={handleCaloriesChange}
+          handleQuantityChange={handleQuantityChange}
+        />
+      </div>
+      <div className='container'>
+
+
+        <FoodBox foods={foods} query={query} />
+      </div>
     </div>
   );
 }

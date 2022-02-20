@@ -27,37 +27,37 @@
     "name": "Pot Roast",
     "calories": 350,
     "image": "https://i.imgur.com/WCzJDWz.jpg",
-    "quantity": 0
+    "quantity": 1
   },
   {
     "name": "Lasagna",
     "calories": 750,
     "image": "https://i.imgur.com/ClxOafl.jpg",
-    "quantity": 0
+    "quantity": 1
   },
   {
     "name": "Hamburger",
     "calories": 400,
     "image": "https://i.imgur.com/LoG39wK.jpg",
-    "quantity": 0
+    "quantity": 1
   },
   {
     "name": "Pad Thai",
     "calories": 475,
     "image": "https://i.imgur.com/5ktcSzF.jpg",
-    "quantity": 0
+    "quantity": 1
   },
   {
     "name": "Almonds",
     "calories": 75,
     "image": "https://i.imgur.com/JRp4Ksx.jpg",
-    "quantity": 0
+    "quantity": 1
   },
   {
     "name": "Bacon",
     "calories": 175,
     "image": "https://i.imgur.com/7GlqDsG.jpg",
-    "quantity": 0
+    "quantity": 1
   },
   {
     "name": "Hot Dog",
